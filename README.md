@@ -59,14 +59,16 @@ sbatch repose.sh
 ## To create your own project based on the template 
 
 **Warning**: in order to use git as instructed below, you need to configure `git` first **on your computer**. See the workflow website for detailed information.
+1. On GitHub, navigate to the main page of the repository. [chgpu_agave_template](https://github.com/JulianTao/chgpu_agave_template) 
+2. Above the file list, click `Use this template`, which usually appears in green.
+4. Type a name for your repository, and an optional description. The project name should be concise but indicative, e.g., "sample_prep". For a more comprehensive instruction on how to create a repo from a template, check [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) 
+**Note**: instead of using "template", you can also "fork" the repo and then update the settings such as repo name etc. There are some differences though, as discussed [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) 
 
-1. Fork the `chgpu_agave_template` repo from github by clicking the `Fork` button on the upper-right corner
-2. In the forked repo, click the `Settings` button, and then rename the repo with a concise but meaningful project name, e.g., "sample_prep".
-3. **On your own computer**, clone the new repo. 
-4. Rename the `cpp`,`json`, `sh` files with your project name. 
+6. **On your own computer**, clone the new repo. 
+7. Rename the `cpp`,`json`, `sh` files with your project name. 
    For example, `repose.cpp` --> `sample_prep.cpp`; `repose.json` --> `sample_prep.json`; and `repose.sh` --> `sample_prep.json`
-5. Edit the source `cpp` and `json` files for your project.
-6. Update the `CMakeList.txt` file:
+8. Edit the source `cpp` and `json` files for your project.
+9. Update the `CMakeList.txt` file:
 
    Replace the word `repose` with your project name.
 
