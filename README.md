@@ -42,6 +42,7 @@ ls -al
 
    * a CMakeList.txt
    * a bash file to be run by `sbatch`
+   * a .gitignore file to ignore the output and log files for git operations
    * source files 
      * repose.cpp
      * GpuDemoUtils.hpp
