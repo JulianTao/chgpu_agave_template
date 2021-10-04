@@ -3,6 +3,9 @@
 ## To test run the template project on Agave
 
 **Warning**: in order to use the google drive and git as instructed, you need to update your personal configure files for `rclone` and `git` on the **cluster**  first. 
+
+If you prefer to use GUI tools for `git` operations, neglect the corresponding command line instructions below and go ahead and use the GUI tools you are familiar with. Do note that using the command line could potentially streamline your workflow and improve your efficiency further.
+
 See the workflow website for detailed information.
 
 1. Logon to the Agave cluster
