@@ -1,10 +1,9 @@
 # A template ChronoGPU project to run on Agave
 
-**Warning**: in order to use the google drive, you need to configure `rclone` first. 
+## To test run the template project on Agave
+
+**Warning**: in order to use the google drive and git as instructed, you need to update your personal configure files for `rclone` and `git` on the **cluster**  first. 
 See the workflow website for detailed information.
-
-
-## To test run the template project, follow these steps:
 
 1. Logon to the Agave cluster
 
@@ -58,6 +57,8 @@ sbatch repose.sh
 9. Examine the shared google drive, there should be a new folder data folder with the name specified in the bash script. 
 
 ## To create your own project based on the template 
+
+**Warning**: in order to use git as instructed below, you need to configure `git` first **on your computer**. See the workflow website for detailed information.
 
 1. Fork the `chgpu_agave_template` repo from github by clicking the `Fork` button on the upper-right corner
 2. In the forked repo, click the `Settings` button, and then rename the repo with a concise but meaningful project name, e.g., "sample_prep".
