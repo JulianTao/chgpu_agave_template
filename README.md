@@ -57,6 +57,45 @@ sbatch repose.sh
 8. Examine the `OUTPUT` directory and the log files `.err` and `.out`.
 9. Examine the shared google drive, there should be a new folder data folder with the name specified in the bash script. 
 
+## To create your own project based on the template 
+
+1. Fork the `chgpu_agave_template` repo from github by clicking the `Fork` button on the upper-right corner
+2. In the forked repo, click the `Settings` button, and then rename the repo with a concise but meaningful project name, e.g., "sample_prep".
+3. **On your own computer**, clone the new repo. 
+4. Rename the `cpp`,`json`, `sh` files with your project name. 
+   For example, `repose.cpp` --> `sample_prep.cpp`; `repose.json` --> `sample_prep.json`; and `repose.sh` --> `sample_prep.json`
+5. Edit the source `cpp` and `json` files for your project.
+6. Update the `CMakeList.txt` file:
+
+   Replace the word `repose` with your project name.
+
+   For example, change
+
+```CMake
+set(MY_PROJECT repose)
+```
+to
+
+```CMake
+set(MY_PROJECT sample_prep)
+```
+7. Update the `repose.sh` file
+
+  * Search and replace all instances of `repose` with your project name, e.g., `sample_prep`
+  * Update the slurm requests as shown in the example bash script.
+
+8. Commit the changes and push to the github repo.
+
+```bash
+git add --all
+git commit -m 'update to sample_prep'
+git push
+```
+9. Repeat the steps the same as in the "test run" example above, except that you work on the new project repo.
+
+
+
+
 
 
 
