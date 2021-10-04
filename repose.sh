@@ -22,5 +22,7 @@ make					# Build the project
 ./repose repose.json			# Run the executive
 cd ..					# Return to the project directory
 tar czvf repose_output.tgz ./OUT	# Make a tarball of the output files with compression
-rclone copy ./repose_output.tgz BiGdata:repose
-rm -r ./OUT repose_output.tgz
+# Move output files to GoogleDrive shared folder. BiGdata is the shared group folder
+# BiGdata:repose will create a new subfolder with the project name "repose"
+rclone copy ./repose_output.tgz BiGdata:repose 
+rm -rf ./OUT repose_output.tgz 		# Remove output files
