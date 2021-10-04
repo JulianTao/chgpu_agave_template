@@ -1,9 +1,15 @@
 #!/bin/bash
 
+# This is an example bash file for build and run ChronoGpu projects
+# Update the numbers of compute nodes, cpu cores and gpus (-N, -n, --gres=gpu:) and computing wall time (-t) based on your computation needs
+# Update your email address (--mail-user=) to recieve notifications
+# replace all the instances of "repose" with your project title (such as "sample_generation"
+
+
 #SBATCH -N 1                        	# number of compute nodes
 #SBATCH -n 4                        	# number of tasks your job will spawn
 #SBATCH --mem=16G                   	# amount of RAM requested in GiB (2^40)
-#SBATCH -p gpu                     	# Use gpu partition
+#SBATCH -p gpu                     	  # Use gpu partition
 #SBATCH -C V100                     	# Specify GPU type
 #SBATCH -q wildfire                 	# Run job under wildfire QOS queue
 #SBATCH --gres=gpu:4                	# Request 4 GPUs
