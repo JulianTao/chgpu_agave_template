@@ -15,7 +15,7 @@ cmake_minimum_required(VERSION 3.10)
 # === 1 === 
 # Modify the project name if you want: 
 #--------------------------------------------------------------
-set(MY_PROJECT repose)
+set(MY_PROJECT mychgpu)
 
 project(${MY_PROJECT})
 
