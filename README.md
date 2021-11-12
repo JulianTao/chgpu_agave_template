@@ -46,15 +46,15 @@ ls -al
    * a bash file to be run by `sbatch`
    * a .gitignore file to ignore the output and log files for git operations
    * source files 
-     * repose.cpp
+     * mychgpu.cpp
      * GpuDemoUtils.hpp
-     * repose.json
-6. Edit `repose.sh` if needed, following the instructions inside
+     * mychgpu.json
+6. Edit `mychgpu.sh` if needed, following the instructions inside
 
 8. Run the bash file
 
 ```bash
-sbatch repose.sh
+sbatch mychgpu.sh
 ```
 8. Examine the `OUTPUT` directory and the log files `.err` and `.out`.
 9. Examine the shared google drive, there should be a new folder data folder with the name specified in the bash script. 
@@ -68,26 +68,29 @@ sbatch repose.sh
 **Note**: instead of using "template", you can also "fork" the repo and then update the settings such as repo name etc. There are some differences though, as discussed [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) 
 
 6. **On your own computer**, clone the new repo. 
-7. Rename the `cpp`,`json`, `sh` files with your project name. 
-   For example, `repose.cpp` --> `sample_prep.cpp`; `repose.json` --> `sample_prep.json`; and `repose.sh` --> `sample_prep.json`
-8. Edit the source `cpp` and `json` files for your project.
+
+   **Note that if you want to keep the project names and file names, neglect the renaming and searching/replacing processes in the following steps. This way, you only need to modify the technical contents and it may save some time. The downside is when you have multiple projects, all of the executives will have the same name. It may cause confusions in the long run.**
+
+7. If you prefer, rename the `cpp`,`json`, `sh` files with your project name. 
+   For example, `mychgpu.cpp` --> `sample_prep.cpp`; `mychgpu.json` --> `sample_prep.json`; and `mychgpu.sh` --> `sample_prep.json`
+8. Edit the source `cpp` and `json` files for your project. Add `.obj` files to the `data` subfolder as needed.
 9. Update the `CMakeList.txt` file:
 
-   Replace the word `repose` with your project name.
+   Replace the word `mychgpu` with your project name.
 
    For example, change
 
 ```CMake
-set(MY_PROJECT repose)
+set(MY_PROJECT mychgpu)
 ```
 to
 
 ```CMake
 set(MY_PROJECT sample_prep)
 ```
-7. Update the `repose.sh` file
+7. Update the `mychgpu.sh` file
 
-  * Search and replace all instances of `repose` with your project name, e.g., `sample_prep`
+  * Search and replace all instances of `mychgpu` with your project name, e.g., `sample_prep`
   * Update the slurm requests as shown in the example bash script.
 
 8. Commit the changes and push to the github repo.
